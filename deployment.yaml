@@ -22,14 +22,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: node-app-1
+  name: node-app
 spec:
   selector:
-    app: node-app-1
+    app: node-app
   ports:
   - protocol: TCP
     port: 80           # This is the port inside the cluster
     targetPort: 5000    # Port on which your Node.js app is listening
-    nodePort: 30001     # External port on the node (choose a port in the range 30000-32767)
+    nodePort: 30002     # External port on the node (choose a port in the range 30000-32767)
   type: NodePort  
  
