@@ -27,9 +27,10 @@ spec:
   selector:
     app: node-app
   ports:
-  - protocol: TCP
-    port: 80           # This is the port inside the cluster
-    targetPort: 5000    # Port on which your Node.js app is listening
-    nodePort: 30002     # External port on the node (choose a port in the range 30000-32767)
-  type: NodePort  
+  - name: http      # Add a name for the port
+    protocol: TCP
+    port: 80
+    targetPort: 5000
+    nodePort: 30003
+  type: NodePort 
  
